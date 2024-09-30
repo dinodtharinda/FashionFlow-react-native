@@ -55,6 +55,7 @@ const OnboardingScreen = () => {
         )}
         keyExtractor={(item, index) => index.toString()}
         horizontal
+        overScrollMode="never"
         scrollEnabled={true}
         pagingEnabled
         showsHorizontalScrollIndicator={false}
