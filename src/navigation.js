@@ -21,11 +21,12 @@ const Navigation = () => {
             headerShown: false,
           }}
         />
-
         <Stack.Screen
           name="authScreen"
           component={AuthScreen}
-         
+          options={{
+            headerShown: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
