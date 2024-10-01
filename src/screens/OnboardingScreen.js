@@ -11,7 +11,7 @@ import { useWindowDimensions } from "react-native";
 import { boardingItems } from "../data/onboardings";
 import Button from "../components/Button";
 import { useLayoutEffect, useRef, useState } from "react";
-const OnboardingScreen = () => {
+const OnboardingScreen = ({navigation}) => {
   const { width, height } = useWindowDimensions();
   const flatListRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,7 +21,7 @@ const OnboardingScreen = () => {
     if (currentIndex < boardingItems.length - 1) {
       flatListRef.current.scrollToIndex({ index: currentIndex + 1 });
     } else {
-      console.log("End of onboarding");
+      navigation.navigate('authScreen')
     }
   };
 

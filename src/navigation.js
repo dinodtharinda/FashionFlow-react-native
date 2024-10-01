@@ -5,6 +5,7 @@ import {
 } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import OnboardingScreen from "./screens/OnboardingScreen";
+import AuthScreen from "./screens/AuthScreen";
 
 const Stack =
   Platform.OS === "web" ? createStackNavigator() : createNativeStackNavigator();
@@ -17,8 +18,14 @@ const Navigation = () => {
           name="onboard"
           component={OnboardingScreen}
           options={{
-            headerShown:false
+            headerShown: false,
           }}
+        />
+
+        <Stack.Screen
+          name="authScreen"
+          component={AuthScreen}
+         
         />
       </Stack.Navigator>
     </NavigationContainer>
