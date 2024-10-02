@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     objectFit: "scale-down",
   },
   signOptionName: {
-    fontSize: 15,
+    fontSize: GlobalStyles.Dimensions.regular,
     fontWeight: "500",
     fontFamily:GlobalStyles.fonts.medium
   },

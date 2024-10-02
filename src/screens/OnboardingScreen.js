@@ -1,8 +1,6 @@
 import {
   FlatList,
   Image,
-  Pressable,
-  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -43,7 +41,7 @@ const OnboardingScreen = ({ navigation }) => {
         renderItem={({ item }) => (
           <View>
             <Image
-              style={{ width: width, aspectRatio: 1 / 1.35 }}
+              style={{ width: width, height:height>600? height * 0.65: height * 0.5 }}
               source={{
                 uri: item.image,
               }}
@@ -96,10 +94,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     marginBottom: 10,
-    maxHeight:150
+    maxHeight: 150,
   },
   title: {
-    fontSize: 24,
+    fontSize: GlobalStyles.Dimensions.large,
     fontWeight: "400",
     letterSpacing: 1.2,
     marginTop: 10,
@@ -107,7 +105,7 @@ const styles = StyleSheet.create({
     fontFamily: GlobalStyles.fonts.medium,
   },
   subtitle: {
-    fontSize: 16,
+    fontSize: GlobalStyles.Dimensions.medium,
     fontWeight: "300",
     letterSpacing: 1.2,
     color: "grey",

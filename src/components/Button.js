@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonText: {
-    fontSize:15,
+    fontSize:GlobalStyles.Dimensions.small,
     color: "white",
     fontWeight: "500",
     fontFamily:GlobalStyles.fonts.regular

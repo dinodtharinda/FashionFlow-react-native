@@ -1,3 +1,6 @@
+import { Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get("window");
 export const GlobalStyles = {
   colors: {
     primary50: "#f0f0f0", // light gray (almost white)
@@ -22,5 +25,14 @@ export const GlobalStyles = {
     regular: "Poppins-Regular",
     medium: "Poppins-Medium",
     bold: "Poppins-Bold",
+  },
+
+  Dimensions: {
+    extraSmall: width * 0.03,
+    small: width * 0.035,
+    regular: width * 0.037,
+    medium: width * 0.04,
+    large: width * 0.06,
+    extraSmall: width * 0.065,
   },
 };

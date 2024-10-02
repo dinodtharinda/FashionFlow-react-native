@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import Navigation from "./src/navigation";
-import { StyleSheet, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
@@ -28,7 +27,7 @@ export default function App() {
 
   return (
     <>
-      <StatusBar style="light" />
+      <StatusBar style="auto" />
       <Navigation />
     </>
   );

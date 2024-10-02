@@ -1,11 +1,12 @@
-import { StyleSheet, View, Text, Pressable, Image } from "react-native";
+import { StyleSheet, View, Text,} from "react-native";
 import Button from "../components/Button";
 import { GlobalStyles } from "../constants/styles";
 import SignOptionItem from "../components/SignOptionItem";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const AuthScreen = () => {
   return (
-    <View style={styles.rootContainer}>
+    <SafeAreaView style={styles.rootContainer}>
       <Text style={styles.title}>Let's you in</Text>
       <SignOptionItem
         imageUri={
@@ -36,7 +37,7 @@ const AuthScreen = () => {
         <Text style={styles.changeSignText}>Don't have an account?</Text>
         <Text style={styles.changeSignButton}>Sign up</Text>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -50,9 +51,7 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontWeight: "500",
     marginVertical: 20,
-    fontFamily:GlobalStyles.fonts.medium
-
-    
+    fontFamily: GlobalStyles.fonts.medium,
   },
   divider: {
     flexDirection: "row",
@@ -68,8 +67,7 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
     fontWeight: "500",
     color: GlobalStyles.colors.primary200,
-    fontFamily:GlobalStyles.fonts.medium
-    
+    fontFamily: GlobalStyles.fonts.medium,
   },
   dividerItems: {
     height: 2,
@@ -81,18 +79,17 @@ const styles = StyleSheet.create({
     marginVertical: 30,
   },
   changeSignText: {
-    fontSize: 15,
+    fontSize: GlobalStyles.Dimensions.regular,
     color: GlobalStyles.colors.primary300,
     marginRight: 5,
-    fontFamily:GlobalStyles.fonts.regular
+    fontFamily: GlobalStyles.fonts.regular,
   },
   changeSignButton: {
-    fontSize: 15,
+    fontSize: GlobalStyles.Dimensions.regular,
     color: GlobalStyles.colors.primary800,
     fontWeight: "bold",
     marginRight: 5,
-    fontFamily:GlobalStyles.fonts.medium
-    
+    fontFamily: GlobalStyles.fonts.medium,
   },
 });
 
