@@ -34,7 +34,7 @@ const AuthScreen = () => {
       <Button title="Sign in with password" />
       <View style={styles.chagneSign}>
         <Text style={styles.changeSignText}>Don't have an account?</Text>
-        <Text style={styles.changeSignButton} >Sign up</Text>
+        <Text style={styles.changeSignButton}>Sign up</Text>
       </View>
     </View>
   );
@@ -47,9 +47,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    fontSize: 40,
+    fontSize: 35,
     fontWeight: "500",
     marginVertical: 20,
+    
   },
   divider: {
     flexDirection: "row",
@@ -65,27 +66,28 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
     fontWeight: "500",
     color: GlobalStyles.colors.primary200,
+    
   },
   dividerItems: {
     height: 2,
     flex: 1,
     backgroundColor: GlobalStyles.colors.primary100,
   },
-  chagneSign:{
-    flexDirection:'row',
-    marginVertical:30
+  chagneSign: {
+    flexDirection: "row",
+    marginVertical: 30,
   },
-  changeSignText:{
+  changeSignText: {
     fontSize: 15,
     color: GlobalStyles.colors.primary300,
-    marginRight:5
+    marginRight: 5,
   },
-  changeSignButton:{
+  changeSignButton: {
     fontSize: 15,
     color: GlobalStyles.colors.primary800,
-    fontWeight:'bold',
-    marginRight:5
-  }
+    fontWeight: "bold",
+    marginRight: 5,
+  },
 });
 
 export default AuthScreen;

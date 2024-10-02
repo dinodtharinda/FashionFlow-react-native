@@ -1,12 +1,13 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { GlobalStyles } from "../constants/styles";
 
-const Button = ({onPress,title}) => {
+const Button = ({ onPress, title }) => {
   return (
     <View style={styles.buttonOuterContainer}>
       <Pressable
         onPress={onPress}
         android_ripple={{ color: "grey" }}
-        style={styles.button}
+        style={({ pressed }) => [styles.button, pressed]}
       >
         <Text style={styles.buttonText}>{title}</Text>
       </Pressable>
@@ -14,24 +15,24 @@ const Button = ({onPress,title}) => {
   );
 };
 
-
 const styles = StyleSheet.create({
-    buttonOuterContainer: {
-        width: "90%",
-        alignSelf: "center",
-        borderRadius: 100,
-        overflow: "hidden",
-      },
-      button: {
-        backgroundColor: "black",
-        padding: 17,
-        alignItems: "center",
-      },
-      buttonText: {
-        color: "white",
-        fontWeight:'500'
-
-      },
-})
+  buttonOuterContainer: {
+    width: "90%",
+    alignSelf: "center",
+    borderRadius: 100,
+    overflow: "hidden",
+  },
+  button: {
+    backgroundColor: "black",
+    padding: 17,
+    alignItems: "center",
+  },
+  buttonText: {
+    fontSize:15,
+    color: "white",
+    fontWeight: "500",
+    fontFamily:GlobalStyles.fonts.italic
+  },
+});
 
 export default Button;

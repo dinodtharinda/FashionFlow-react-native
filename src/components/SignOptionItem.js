@@ -1,10 +1,10 @@
 import { Image, Pressable, StyleSheet, Text } from "react-native";
 import { GlobalStyles } from "../constants/styles";
 
-const SignOptionItem = ({title, imageUri, onPress}) => {
+const SignOptionItem = ({ title, imageUri, onPress }) => {
   return (
     <Pressable
-    onPress={onPress}
+      onPress={onPress}
       style={({ pressed }) => [
         styles.signOptionContainer,
         pressed && styles.pressed,
@@ -31,18 +31,22 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 10,
     borderColor: GlobalStyles.colors.primary100,
-    marginBottom:10
+    marginBottom: 10,
   },
-  pressed: { opacity: 0.5 },
+  pressed: {
+    opacity: 0.5,
+    transform: [{ scale: 1.02 ,}],
+  },
   signOptionImage: {
     width: 22,
     height: 22,
     marginRight: 10,
-    objectFit:'scale-down'
+    objectFit: "scale-down",
   },
   signOptionName: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: "500",
+
   },
 });
 
