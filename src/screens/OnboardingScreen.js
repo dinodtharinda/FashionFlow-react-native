@@ -11,7 +11,8 @@ import { useWindowDimensions } from "react-native";
 import { boardingItems } from "../data/onboardings";
 import Button from "../components/Button";
 import { useLayoutEffect, useRef, useState } from "react";
-const OnboardingScreen = ({navigation}) => {
+import { GlobalStyles } from "../constants/styles";
+const OnboardingScreen = ({ navigation }) => {
   const { width, height } = useWindowDimensions();
   const flatListRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,7 +22,7 @@ const OnboardingScreen = ({navigation}) => {
     if (currentIndex < boardingItems.length - 1) {
       flatListRef.current.scrollToIndex({ index: currentIndex + 1 });
     } else {
-      navigation.navigate('authScreen')
+      navigation.navigate("authScreen");
     }
   };
 
@@ -69,13 +70,13 @@ const OnboardingScreen = ({navigation}) => {
       />
       <View style={styles.controller}>
         {boardingItems.map((i, k) => (
-          <Pressable
+          <View
             key={k}
             style={[
               styles.selectedControllerItem,
               k !== currentIndex && styles.notSelectedControllerItem,
             ]}
-          ></Pressable>
+          ></View>
         ))}
       </View>
       <View style={styles.floatButton}>
@@ -88,33 +89,34 @@ const OnboardingScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   floatButton: {
     width: "100%",
-    marginTop:30
+    marginTop: 30,
   },
   titleContainer: {
     width: 330,
     alignSelf: "center",
     alignItems: "center",
-    marginBottom:10
+    marginBottom: 10,
+    maxHeight:150
   },
   title: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: "400",
-    letterSpacing: 1.5,
+    letterSpacing: 1.2,
     marginTop: 10,
     textAlign: "center",
+    fontFamily: GlobalStyles.fonts.medium,
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "300",
-    marginTop: 5,
-    letterSpacing: 1.5,
+    letterSpacing: 1.2,
     color: "grey",
     textAlign: "center",
+    fontFamily: GlobalStyles.fonts.regular,
   },
   controller: {
     flexDirection: "row",
     alignSelf: "center",
-    marginTop: 10,
   },
   selectedControllerItem: {
     width: 25,

@@ -50,6 +50,8 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontWeight: "500",
     marginVertical: 20,
+    fontFamily:GlobalStyles.fonts.medium
+
     
   },
   divider: {
@@ -66,6 +68,7 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
     fontWeight: "500",
     color: GlobalStyles.colors.primary200,
+    fontFamily:GlobalStyles.fonts.medium
     
   },
   dividerItems: {
@@ -81,12 +84,15 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: GlobalStyles.colors.primary300,
     marginRight: 5,
+    fontFamily:GlobalStyles.fonts.regular
   },
   changeSignButton: {
     fontSize: 15,
     color: GlobalStyles.colors.primary800,
     fontWeight: "bold",
     marginRight: 5,
+    fontFamily:GlobalStyles.fonts.medium
+    
   },
 });
 

@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   signOptionName: {
     fontSize: 15,
     fontWeight: "500",
-
+    fontFamily:GlobalStyles.fonts.medium
   },
 });
 

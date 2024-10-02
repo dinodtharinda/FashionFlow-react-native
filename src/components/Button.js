@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     fontSize:15,
     color: "white",
     fontWeight: "500",
-    fontFamily:GlobalStyles.fonts.italic
+    fontFamily:GlobalStyles.fonts.regular
   },
 });
 
