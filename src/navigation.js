@@ -6,6 +6,7 @@ import {
 import { NavigationContainer } from "@react-navigation/native";
 import OnboardingScreen from "./screens/OnboardingScreen";
 import AuthScreen from "./screens/AuthScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 const Stack =
   Platform.OS === "web" ? createStackNavigator() : createNativeStackNavigator();
@@ -19,6 +20,7 @@ const Navigation = () => {
           component={OnboardingScreen}
           options={{
             headerShown: false,
+          
           }}
         />
         <Stack.Screen
@@ -26,6 +28,16 @@ const Navigation = () => {
           component={AuthScreen}
           options={{
             headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          name="login"
+          component={LoginScreen}
+          options={{
+            title: "",
+            headerShadowVisible:false,
+            headerTransparent: true,
           }}
         />
       </Stack.Navigator>

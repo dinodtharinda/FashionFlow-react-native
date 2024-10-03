@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderWidth: 2,
     height: 50,
-    width: "85%",
+    width: "100%",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   signOptionName: {
     fontSize: GlobalStyles.Dimensions.regular,
     fontWeight: "500",
-    fontFamily:GlobalStyles.fonts.medium
+    fontFamily:GlobalStyles.fontFamily.medium
   },
 });
 

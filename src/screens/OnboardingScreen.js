@@ -86,8 +86,8 @@ const OnboardingScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   floatButton: {
-    width: "100%",
     marginTop: 30,
+    marginHorizontal:GlobalStyles.screen.padding
   },
   titleContainer: {
     width: 330,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1.2,
     marginTop: 10,
     textAlign: "center",
-    fontFamily: GlobalStyles.fonts.medium,
+    fontFamily: GlobalStyles.fontFamily.medium,
   },
   subtitle: {
     fontSize: GlobalStyles.Dimensions.medium,
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1.2,
     color: "grey",
     textAlign: "center",
-    fontFamily: GlobalStyles.fonts.regular,
+    fontFamily: GlobalStyles.fontFamily.regular,
   },
   controller: {
     flexDirection: "row",

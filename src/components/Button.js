@@ -17,21 +17,22 @@ const Button = ({ onPress, title }) => {
 
 const styles = StyleSheet.create({
   buttonOuterContainer: {
-    width: "90%",
+    width: "100%",
     alignSelf: "center",
     borderRadius: 100,
     overflow: "hidden",
   },
   button: {
     backgroundColor: "black",
-    padding: 17,
+    height: 60,
     alignItems: "center",
+    justifyContent:'center'
   },
   buttonText: {
-    fontSize:GlobalStyles.Dimensions.small,
+    fontSize: GlobalStyles.Dimensions.small,
     color: "white",
     fontWeight: "500",
-    fontFamily:GlobalStyles.fonts.regular
+    fontFamily: GlobalStyles.fontFamily.regular,
   },
 });
 
