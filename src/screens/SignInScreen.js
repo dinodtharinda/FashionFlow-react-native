@@ -5,8 +5,10 @@ import { useState } from "react";
 import Button from "../components/Button";
 import DividerText from "../components/UI/DividerText";
 import TextField from "../components/UI/TextField";
+import SignOptionItem from "../components/SignOptionItem";
+import OptionTextButton from "../components/UI/OptionTextButton";
 
-const LoginScreen = () => {
+const SignInScreen = ({navigation}) => {
   const [check, setCheck] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,13 +39,35 @@ const LoginScreen = () => {
         <Text style={styles.rememberText}>Remember me</Text>
       </View>
 
-      <Button onPress={test} title="Login" />
+      <Button onPress={test} title="Sign in" />
       <DividerText text="or continue with" />
+      <View style={styles.signOptions}>
+        <SignOptionItem
+          imageUri={
+            "https://static.vecteezy.com/system/resources/previews/020/964/386/original/facebook-circle-icon-for-web-design-free-png.png"
+          }
+        />
+        <SignOptionItem
+          imageUri={
+            "https://th.bing.com/th/id/OIP.HgH-NjiOdFOrkmwjsZCCfAHaHl?rs=1&pid=ImgDetMain"
+          }
+        />
+        <SignOptionItem
+          imageUri={
+            "https://th.bing.com/th/id/OIP.NnDtoyv66RLHxsF1sYE3AgHaJC?rs=1&pid=ImgDetMain"
+          }
+        />
+      </View>
+      <OptionTextButton
+        optionText="Don't have an account?"
+        buttonText="Sign up"
+        onPress={()=>navigation.navigate('signUp')}
+      />
     </View>
   );
 };
 
-export default LoginScreen;
+export default SignInScreen;
 
 const styles = StyleSheet.create({
   rootContainer: {
@@ -69,5 +93,10 @@ const styles = StyleSheet.create({
   rememberText: {
     fontSize: GlobalStyles.Dimensions.small,
     fontFamily: GlobalStyles.fontFamily.medium,
+  },
+  signOptions: {
+    flexDirection: "row",
+    width: "70%",
+    justifyContent: "space-around",
   },
 });

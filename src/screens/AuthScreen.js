@@ -1,11 +1,12 @@
-import { StyleSheet, View, Text,} from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import Button from "../components/Button";
 import { GlobalStyles } from "../constants/styles";
 import SignOptionItem from "../components/SignOptionItem";
 import { SafeAreaView } from "react-native-safe-area-context";
 import DividerText from "../components/UI/DividerText";
+import OptionTextButton from "../components/UI/OptionTextButton";
 
-const AuthScreen = ({navigation}) => {
+const AuthScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.rootContainer}>
       <Text style={styles.title}>Let's you in</Text>
@@ -27,13 +28,16 @@ const AuthScreen = ({navigation}) => {
         }
         title="Continue with Apple"
       />
-     <DividerText text="or"/>
+      <DividerText text="or" />
 
-      <Button title="Sign in with password" onPress={()=>navigation.navigate('login')}/>
-      <View style={styles.chagneSign}>
-        <Text style={styles.changeSignText}>Don't have an account?</Text>
-        <Text style={styles.changeSignButton}>Sign up</Text>
-      </View>
+      <Button
+        title="Sign in with password"
+        onPress={() => navigation.navigate("login")}
+      />
+      <OptionTextButton
+        optionText="Don't have an account?"
+        buttonText="Sign up"
+      />
     </SafeAreaView>
   );
 };
@@ -43,30 +47,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    paddingHorizontal:GlobalStyles.screen.padding
+    paddingHorizontal: GlobalStyles.screen.padding,
   },
   title: {
     fontSize: 35,
     fontWeight: "500",
     marginVertical: 20,
-    fontFamily: GlobalStyles.fontFamily.medium,
-  },
- 
-  chagneSign: {
-    flexDirection: "row",
-    marginVertical: 30,
-  },
-  changeSignText: {
-    fontSize: GlobalStyles.Dimensions.regular,
-    color: GlobalStyles.colors.primary300,
-    marginRight: 5,
-    fontFamily: GlobalStyles.fontFamily.regular,
-  },
-  changeSignButton: {
-    fontSize: GlobalStyles.Dimensions.regular,
-    color: GlobalStyles.colors.primary800,
-    fontWeight: "bold",
-    marginRight: 5,
     fontFamily: GlobalStyles.fontFamily.medium,
   },
 });

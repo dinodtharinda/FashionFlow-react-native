@@ -8,6 +8,8 @@ const SignOptionItem = ({ title, imageUri, onPress }) => {
       style={({ pressed }) => [
         styles.signOptionContainer,
         pressed && styles.pressed,
+        title && {width:'100%',   height: 50,}
+
       ]}
     >
       <Image
@@ -25,13 +27,12 @@ const styles = StyleSheet.create({
   signOptionContainer: {
     flexDirection: "row",
     borderWidth: 2,
-    height: 50,
-    width: "100%",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,
     borderColor: GlobalStyles.colors.primary100,
     marginBottom: 10,
+    paddingHorizontal:12
   },
   pressed: {
     opacity: 0.5,
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   signOptionImage: {
     width: 22,
     height: 22,
-    marginRight: 10,
+    margin: 10,
     objectFit: "scale-down",
   },
   signOptionName: {
